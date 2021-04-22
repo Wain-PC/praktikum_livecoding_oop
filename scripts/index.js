@@ -1,4 +1,6 @@
-const items = [
+// Создаём объект из класса Todo.
+// В конструктор передаём первоначальный список элементов.
+const todo = new Todo([
   'Сделать проектную работу',
   'Полить цветы',
   'Пройти туториал по Реакту',
@@ -6,10 +8,10 @@ const items = [
   'Погулять с собакой',
   'Разобраться в замыканиях',
   'Решить задачу на Codewars'
-];
+]);
 
+// Находим на странице элемент, куда будем рендерить Todo.
 const page = document.querySelector('.page');
-const createTodoListForm = (...arg) => new TodoListForm(...arg);
-const createTodoListItem = (...arg) => new TodoListItem(...arg);
-const todoList = new TodoList(items, createTodoListForm, createTodoListItem);
-todoList.render(page);
+
+// Рендерим Todo в элемент-контейнер
+todo.render(page);

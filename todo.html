@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Todo List</title>
+  <!-- Подключаем стили -->
+  <link rel="stylesheet" href="style/normalize.css"/>
+  <link rel="stylesheet" href="style/index.css"/>
+  <!-- Подключаем скрипты - определение классов -->
+  <script src="scripts/Renderable.js" defer></script>
+  <script src="scripts/Todo.js" defer></script>
+  <script src="scripts/List.js" defer></script>
+  <script src="scripts/Card.js" defer></script>
+
+  <!-- Подключаем скрипт запуска приложения -->
+  <script src="scripts/index.js" defer></script>
+</head>
+
+<body>
+
+<!-- Контейнер, куда будут отрендерено приложение Todo -->
+<div class="page"></div>
+
+<!-- Шаблон формы. Класс Todo -->
+<template id="todo-form-template" style="display: none;">
+  <div class="todolist">
+    <h1>Todo List</h1>
+    <form class="todolist-form">
+      <input type="text" class="todolist-form_input"/>
+      <button type="submit" class="todolist-form_submit">Сохранить</button>
+    </form>
+  </div>
+</template>
+
+<!-- Шаблон списка. Класс List. -->
+<template id="todo-list-template" style="display: none;">
+  <section class="todolist-items"></section>
+</template>
+
+<!-- Шаблон карточки. Класс Card. -->
+<template id="todo-card-template" style="display: none;">
+  <article class="todolist-item">
+    <span class="todolist-item__text">Текст задачи</span>
+    <button class="todolist-item__copy"></button>
+    <button class="todolist-item__remove"></button>
+  </article>
+</template>
+
+</body>
+</html>
